@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\slutprojekt\\praktisktprov\\praktisktprov.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\slutprojekt\\slutprojekt\\praktisktprov\\praktisktprov.csproj",
       "projectName": "praktisktprov",
-      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\slutprojekt\\praktisktprov\\praktisktprov.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\slutprojekt\\slutprojekt\\praktisktprov\\praktisktprov.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\slutprojekt\\praktisktprov\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\slutprojekt\\slutprojekt\\praktisktprov\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
