@@ -6,17 +6,23 @@ class Character
 {
     public string Name { get; set; }
     public int Health { get; set; }
-    public int AttackPower { get; set; }
-    public Character(string name, int health, int attackPower)
+    public int MinAttackPower { get; set; }
+
+    public int MaxAttackPower { get; set; }
+
+    private static Random random = new Random();
+    public Character(string name, int health, int minAttackPower, int maxAttackPower)
     {
         Name = name;
         Health = health;
-        AttackPower = attackPower;
+        MinAttackPower = minAttackPower;
+        MaxAttackPower = maxAttackPower;
     }
     public virtual void Attack(Character target)
     {
-        Console.WriteLine($"{Name} attakerar {target.Name} för {AttackPower} skada");
-        target.Health -= AttackPower;
+        int damage = random.Next(MinAttackPower, MaxAttackPower + 1);
+        Console.WriteLine($"{Name} attakerar {target.Name} för {damage} skada");
+        target.Health -= damage;
         if (target.Health < 0)
         {
             target.Health = 0;

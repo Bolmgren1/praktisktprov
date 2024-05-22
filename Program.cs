@@ -6,8 +6,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Player player = new Player("Player", 100, 10);
-        Enemy enemy = new Enemy("Fiende", 50,8);
+        Player player = new Player("Player", 100, 5, 15);
+        Enemy enemy = new Enemy("Fiende", 80, 3, 25);
+        int score = 0;
 
         while (player.Health > 0 && enemy.Health > 0)
         {
@@ -19,25 +20,38 @@ class Program
             if (val == "1")
             {
                 player.Attack(enemy);
+                if (enemy.Health > 0)
+                {
+                    enemy.Attack(player);
+                }
             }
             else if (val == "2") 
             {
                 Console.WriteLine($"{player.Name} Hp: {player.Health}");
                 Console.WriteLine($"{enemy.Name} Hp: {enemy.Health}");
             }
-            if (enemy.Health > 0)
-            {
-                enemy.Attack(player);
-            }
+            
         }
         if (player.Health <= 0)
         {
-            Console.WriteLine("Du har dött");
+            Console.WriteLine($"Du har dött, fiende hade {enemy.Health} hp kvar!");
+            score = 15;
         }
         else if (enemy.Health <= 0)
         {
-            Console.WriteLine("Du vann då du döda fienden");
+            Console.WriteLine($"Du vann då du döda fienden, du hade {player.Health} hp kvar!");
+            score = 50;
         }  
+
+        Console.WriteLine($"Dina poäng är: {score}");
+        SaveScore(score);
+
+        static void SaveScore(int score)
+        {
+            StreamWriter sw = new StreamWriter("Textfil.txt");
+            sw.WriteLine($"Ditt poäng är: {score}");
+            sw.Close();
+        }
 
     }
 }

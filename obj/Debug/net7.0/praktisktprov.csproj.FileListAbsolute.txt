@@ -16,3 +16,17 @@ C:\Users\Admin\Documents\GitHub\slutprojekt\slutprojekt\praktisktprov\obj\Debug\
 C:\Users\Admin\Documents\GitHub\slutprojekt\slutprojekt\praktisktprov\obj\Debug\net7.0\praktisktprov.pdb
 C:\Users\Admin\Documents\GitHub\slutprojekt\slutprojekt\praktisktprov\obj\Debug\net7.0\praktisktprov.genruntimeconfig.cache
 C:\Users\Admin\Documents\GitHub\slutprojekt\slutprojekt\praktisktprov\obj\Debug\net7.0\ref\praktisktprov.dll
+C:\Users\Admin\Documents\GitHub\praktisktprov\bin\Debug\net7.0\praktisktprov.exe
+C:\Users\Admin\Documents\GitHub\praktisktprov\bin\Debug\net7.0\praktisktprov.deps.json
+C:\Users\Admin\Documents\GitHub\praktisktprov\bin\Debug\net7.0\praktisktprov.runtimeconfig.json
+C:\Users\Admin\Documents\GitHub\praktisktprov\bin\Debug\net7.0\praktisktprov.dll
+C:\Users\Admin\Documents\GitHub\praktisktprov\bin\Debug\net7.0\praktisktprov.pdb
+C:\Users\Admin\Documents\GitHub\praktisktprov\obj\Debug\net7.0\praktisktprov.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GitHub\praktisktprov\obj\Debug\net7.0\praktisktprov.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\praktisktprov\obj\Debug\net7.0\praktisktprov.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\praktisktprov\obj\Debug\net7.0\praktisktprov.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\praktisktprov\obj\Debug\net7.0\praktisktprov.dll
+C:\Users\Admin\Documents\GitHub\praktisktprov\obj\Debug\net7.0\refint\praktisktprov.dll
+C:\Users\Admin\Documents\GitHub\praktisktprov\obj\Debug\net7.0\praktisktprov.pdb
+C:\Users\Admin\Documents\GitHub\praktisktprov\obj\Debug\net7.0\praktisktprov.genruntimeconfig.cache
+C:\Users\Admin\Documents\GitHub\praktisktprov\obj\Debug\net7.0\ref\praktisktprov.dll

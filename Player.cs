@@ -6,7 +6,7 @@ namespace praktisktprov
 {
     class Player : Character
     {
-        public Player(string name, int health, int attackPower) : base(name, health, attackPower)
+        public Player(string name, int health, int minAttackPower, int maxAttackPower) : base(name, health, minAttackPower, maxAttackPower)
         {
         }
     }
