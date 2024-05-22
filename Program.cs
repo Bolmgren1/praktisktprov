@@ -8,6 +8,7 @@ class Program
     {
         Player player = new Player("Player", 100, 5, 15);
         Enemy enemy = new Enemy("Fiende", 80, 3, 25);
+        Enemy enemy1 = new Enemy("Dvärg", 55, 2, 10);
         int score = 0;
 
         while (player.Health > 0 && enemy.Health > 0)
