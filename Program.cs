@@ -8,31 +8,21 @@ class Program
     static void Main(string[] args)
     {
         Player player = new Player("Player", 100, 5, 15); // Skapar spelaren
-        Enemy currentEnemy = null; // visar att just nu är det ingen fiende vald
+        
         int score = 0; // poängen startar på noll
 
-
-        Console.WriteLine("Välj vilen fiende du vill möta"); // här får man välja vilken fiende man ska möta
-        Console.WriteLine("1. Skelett");
-        Console.WriteLine("2. Hobbit ");
-
-        string enemyVal = Console.ReadLine(); // läser vilket val man gör
-
-        if (enemyVal == "1") // om man väljer val 1
+        while (player.Health > 0)
         {
-            currentEnemy = new Skelett(); // visar att fienden är skelett
+            Enemy enemy = GenerateRandomEnemy();
         }
-        else // om man inte väljer 1 så blir det denna automatiskt
-        {
-            currentEnemy = new Hobbit(); // visar att fienden är hobbit
-        }
+
 
 
         while (player.Health > 0 && currentEnemy.Health > 0) // Medans spelaren och fiende lever gäller detta
         {
             Console.WriteLine("Det är spelarens tur, välj mellan alternativen under"); // skriver ut valen
-            Console.WriteLine("1. Attakera");
-            Console.WriteLine("2. Visa ditt liv");
+            Console.WriteLine("1. Attakera"); // väljer man 1 så attackerar man
+            Console.WriteLine("2. Visa ditt liv"); // väljer man 2 visar man både ditt och fiendens liv
 
             string val = Console.ReadLine(); //läser om du väljer val 1 eller 2
             if (val == "1") // när man väljer 1
@@ -61,13 +51,20 @@ class Program
             
             score = RandomScore();// poängen du får för att vinna
 
+            Console.WriteLine("Vill du fortsätta (ja/nej)");
+            string coutinueChoise = Console.ReadLine();
+            if (coutinueChoise.ToLower()!= "Yes")
+            {
+                break;
+            }
+
         }  
 
-        static int RandomScore()
+        static int RandomScore() // gör så man får random poäng när man vinner
         {
-            Random random = new Random();
-            return random.Next(50, 250);
-        }
+            Random random = new Random(); 
+            return random.Next(50, 250); // gör så man får mellan 50-250 poäng när man vinner
+        } 
 
         Console.WriteLine($"Dina poäng är: {score}"); // Skriver ut dina poäng du får
         SaveScore(score); // sparar poängen
