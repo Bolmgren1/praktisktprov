@@ -19,13 +19,16 @@ class Program
 
         int score = 0; // poängen startar på noll
 
+
         Random random = new Random(); // skapar en random instans
-        while (player.Health > 0 && enemies.Count > 0) // när spelaren och fienden lever gäller denna loop
+        bool GameOn = true;
+        while (player.Health > 0 && enemies.Count > 0 && GameOn) // när spelaren och fienden lever gäller denna loop
         {
+
             Enemy currentEnemy = enemies[0]; // väljer första fienden i listan
             Console.WriteLine($"Du ska slåss mot {currentEnemy.Name}"); // skriver ut vilken fiende jag ska slåss mot
 
-            while(player.Health > 0 && currentEnemy.Health > 0) // Medans spelaren och fiende lever gäller detta
+            while(player.Health > 0 && currentEnemy.Health > 0 && GameOn) // Medans spelaren och fiende lever gäller detta
             {
                 Console.WriteLine("Det är spelarens tur, välj mellan alternativen under"); // skriver ut valen
                 Console.WriteLine("1. Attakera"); // väljer man 1 så attackerar man
@@ -49,7 +52,7 @@ class Program
                 {
                     Console.WriteLine($"Du har dött"); // skriver ut att du har dött
                     score = 15; // poängen du får om du förlorar
-                    break;
+                    GameOn = false;
                 }
                 else if (currentEnemy.Health <= 0) // om spelaren dödar fienden händer detta
                 {
@@ -62,7 +65,7 @@ class Program
                     string continueChoise = Console.ReadLine(); // läser spelaren val
                     if (continueChoise.ToLower()!= "ja") // om valet inte är ja går detta igenom
                     {
-                        break; // alsutar loopen
+                        GameOn = false; // alsutar loopen
                     }
                     
                 }  
@@ -70,9 +73,9 @@ class Program
             
         }
 
-        if (player.Health > 0 && enemies.Count == 0) // om spelaren är vid liv och fiende är inte vid liv
+        if (player.Health > 0 && enemies.Count == 0) // om spelaren är vid liv och fiende är vid liv
         {
-            Console.WriteLine("Du har dödat alla fiender"); 
+            Console.WriteLine("Du har dödat alla fiender");
         }
 
         Console.WriteLine($"Dina poäng är: {score}"); // Skriver ut dina poäng du får
